@@ -1,0 +1,8 @@
+
+*.pyc
+*.pyo
+*.sqlite3
+README.txt
+scripts.txt
+__pycache__
+venv

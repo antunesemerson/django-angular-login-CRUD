@@ -1,0 +1,15 @@
+<h2>Novo Usuário</h2>
+
+Usuário:
+<input type="text" [(ngModel)]="user.username"> <br>
+Nome:
+<input type="text" [(ngModel)]="user.first_name"> <br>
+Sobrenome:
+<input type="text" [(ngModel)]="user.last_name"> <br>
+E-mail:
+<input type="text" [(ngModel)]="user.email"> <br>
+Senha:
+<input type="text" [(ngModel)]="user.password"> <br>
+
+<button Style="margin: 5px" (click)="cancelClicked(user)" class="button">Cancelar</button>
+<button Style="margin: 5px" (click)="save()" class="button">Salvar Membro</button>

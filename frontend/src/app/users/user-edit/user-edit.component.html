@@ -1,0 +1,21 @@
+<h2>Members Detail Component!</h2>
+
+Você está editando: {{ selected_user.first_name }} {{ selected_user.last_name }}
+<br>
+ID:
+<input type="text" [(ngModel)]="selected_user.id" readonly> <br>
+Usuário:
+<input type="text" [(ngModel)]="selected_user.username"> <br>
+Nome:
+<input type="text" [(ngModel)]="selected_user.first_name"> <br>
+Sobrenome:
+<input type="text" [(ngModel)]="selected_user.last_name"> <br>
+E-mail:
+<input type="text" [(ngModel)]="selected_user.email"> <br>
+Admin:
+<input type="text" [(ngModel)]="selected_user.is_superuser"> <br>
+Ativo:
+<input type="text" [(ngModel)]="selected_user.is_active"> <br>
+
+<button Style="margin: 5px" (click)="cancelClicked(user)" class="button">Cancelar</button>
+<button style="margin: 5px;"(click)="update()" class="button">Atualizar</button>
