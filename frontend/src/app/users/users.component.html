@@ -1,7 +1,7 @@
-<button style="float: right" (click)="logout()">Sair</button>
+
 
 <h1 (click)="home()">Usuários</h1>
-<button (click)="newUser()" class="button primary" style="margin: 20px; float: right;">Novo</button>
+<button (click)="newUser()" class="button primary" style="margin-bottom: 20px; float: right;">Novo</button>
 
 <table class="alt">
   <thead>
@@ -10,7 +10,6 @@
       <th style="text-align: center;">Usuário</th>
       <th style="text-align: center;">Nome</th>
       <th style="text-align: center;">E-mail</th>
-      <th style="text-align: center;">Admin</th>
       <th style="text-align: center;">Ativo</th>
       <th style="text-align: center;">DT Cadastro</th>
       <th style="text-align: center;">Opções</th>
@@ -22,7 +21,6 @@
       <td style="text-align: center;">{{ user.username }}</td>
       <td style="text-align: center;">{{ user.first_name }} {{ user.last_name }}</td>
       <td style="text-align: center;">{{ user.email }}</td>
-      <td style="text-align: center;">{{ user.is_superuser }}</td>
       <td style="text-align: center;">{{ user.is_active }}</td>
       <td style="text-align: center;">{{ user.date_joined }}</td>
       <td style="text-align: center;">

@@ -2,7 +2,6 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { Router } from '@angular/router';
 import { UsersItem } from './users-item.interface';
-import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-users',
@@ -17,7 +16,6 @@ export class UsersComponent implements OnInit {
   error: any;
 
   constructor(
-    private authService: AuthService,
     private api: ApiService,
     private router: Router
   ) { }
@@ -51,12 +49,9 @@ export class UsersComponent implements OnInit {
     this.router.navigate(['users']);
   }
 
-  logout() {
-    this.authService.logout(),
-    this.router.navigate(['login']);
-  }
-
   newUser() {
     this.router.navigate(['users/user-new']);
   }
+
+
 }

@@ -8,22 +8,22 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard, AuthService, AuthInterceptor } from './auth.service';
 import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 import { UsersComponent } from './users/users.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { UserDeleteComponent } from './users/user-delete/user-delete.component';
 import { UserNewComponent } from './users/user-new/user-new.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent,
     UsersComponent,
     UserEditComponent,
     UserDeleteComponent,
     UserNewComponent,
+    HeaderComponent,
   ],
   imports: [
     FormsModule,

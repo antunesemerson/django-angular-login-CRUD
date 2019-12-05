@@ -8,8 +8,6 @@ import { tap, shareReplay } from 'rxjs/operators';
 import * as jwtDecode from 'jwt-decode';
 import * as moment from 'moment';
 
-import { environment } from '../environments/environment';
-
 @Injectable()
 export class AuthService {
 
@@ -42,7 +40,7 @@ export class AuthService {
 
   signup(username: string, email: string, password1: string, password2: string) {
     return this.http.post(
-      this.apiRoot.concat('signup/'),
+      this.apiRoot.concat('users'),
       { username, email, password1, password2 }
     ).pipe(
       tap(response => this.setSession(response)),
@@ -93,7 +91,6 @@ export class AuthInterceptor implements HttpInterceptor {
       const cloned = req.clone({
         headers: req.headers.set('Authorization', 'JWT '.concat(token))
       });
-
       return next.handle(cloned);
     } else {
       return next.handle(req);
