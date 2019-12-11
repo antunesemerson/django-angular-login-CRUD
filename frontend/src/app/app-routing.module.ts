@@ -7,6 +7,7 @@ import { UsersComponent } from './users/users.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { UserDeleteComponent } from './users/user-delete/user-delete.component';
 import { UserNewComponent } from './users/user-new/user-new.component';
+import { IndexComponent } from './index/index.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'users/user-edit/:id', component: UserEditComponent, canActivate: [AuthGuard] },
   { path: 'users/user-delete/:id', component: UserDeleteComponent, canActivate: [AuthGuard] },
   { path: 'users/user-new', component: UserNewComponent, canActivate: [AuthGuard] },
+  { path: 'index', component: IndexComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

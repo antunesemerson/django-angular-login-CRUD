@@ -13,6 +13,7 @@ import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { UserDeleteComponent } from './users/user-delete/user-delete.component';
 import { UserNewComponent } from './users/user-new/user-new.component';
 import { HeaderComponent } from './header/header.component';
+import { IndexComponent } from './index/index.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HeaderComponent } from './header/header.component';
     UserDeleteComponent,
     UserNewComponent,
     HeaderComponent,
+    IndexComponent,
   ],
   imports: [
     FormsModule,

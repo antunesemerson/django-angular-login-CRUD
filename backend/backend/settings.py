@@ -51,7 +51,6 @@ INSTALLED_APPS = [
 
     'corsheaders',
     
-    'shopping',
     'core',
 ]
 

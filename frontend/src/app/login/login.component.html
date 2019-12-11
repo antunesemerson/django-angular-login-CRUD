@@ -5,7 +5,7 @@
     </h1>
   </div>
 
-  <input #username type='text' placeholder='usuario'> <br>
-  <input #password type='password' placeholder='senha'> <br>
-  <button (click)="login(username.value, password.value)">Entrar</button>
+  <input #username type='text' placeholder='usuario' onkeypress="handle(event)"> <br>
+  <input #password type='password' placeholder='senha' onkeypress="handle(event)"> <br>
+  <button id="logar" (click)="login(username.value, password.value)">Entrar</button>
 </div>

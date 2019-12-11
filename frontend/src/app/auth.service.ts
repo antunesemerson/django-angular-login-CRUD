@@ -20,6 +20,7 @@ export class AuthService {
     const payload = <JWTPayload> jwtDecode(token);
     const expiresAt = moment.unix(payload.exp);
 
+    localStorage.setItem('payload', payload.user_id);
     localStorage.setItem('token', authResult.token);
     localStorage.setItem('expires_at', JSON.stringify(expiresAt.valueOf()));
   }
@@ -118,7 +119,7 @@ export class AuthGuard implements CanActivate {
 }
 
 interface JWTPayload {
-  user_id: number;
+  user_id: string;
   username: string;
   email: string;
   exp: number;
