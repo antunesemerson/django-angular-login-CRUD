@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { Router } from '@angular/router';
+import { ApiService } from '../users/api.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,12 +10,37 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  user = {first_name: '', last_name: ''};
+  user_id;
+  logedID = '';
+  error;
+
   constructor(
+    private api: ApiService,
+    private router: Router,
+    private rout: ActivatedRoute,
     private authService: AuthService,
-    private router: Router
   ) { }
 
   ngOnInit() {
+    this.logedID = localStorage.getItem('payload');
+
+    this.rout.paramMap.subscribe((param: ParamMap) => {
+      let id = this.logedID;
+      this.user_id = id;
+      this.loadMember(id);
+    });
+  }
+
+  loadMember(id) {
+    this.api.getUser(id).subscribe(
+      data => {
+        this.user = data;
+      },
+      error => {
+        console.log('Aconteceu um erro', error.message);
+      }
+    );
   }
 
   logout() {

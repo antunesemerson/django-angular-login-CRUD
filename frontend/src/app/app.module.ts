@@ -15,6 +15,8 @@ import { UserNewComponent } from './users/user-new/user-new.component';
 import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
 
+import { NgxWidgetGridModule } from 'ngx-widget-grid';
+import { ClarityModule } from '@clr/angular';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { IndexComponent } from './index/index.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    NgxWidgetGridModule,
+    ClarityModule,
   ],
   providers: [
     UsersComponent,
