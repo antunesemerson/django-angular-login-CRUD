@@ -1,11 +1,13 @@
 Install
 
 Python 3.7
+
 https://www.python.org/downloads/
 
 Django 3
+
 https://www.djangoproject.com/download/
-pip install --pre django     #Até 12/19
+
 pip install Django==3        #2020
 
 Considerando que você tenha o Python e o Django instalados.
