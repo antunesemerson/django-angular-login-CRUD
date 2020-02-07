@@ -14,6 +14,7 @@ export class UsersComponent implements OnInit {
 
   items: UsersItem[];
   error: any;
+  order = 'first_name';
 
   constructor(
     private api: ApiService,
@@ -45,13 +46,7 @@ export class UsersComponent implements OnInit {
     this.router.navigate(['users/user-delete', user.id]);
   }
 
-  home = () => {
-    this.router.navigate(['users']);
-  }
-
   newUser() {
     this.router.navigate(['users/user-new']);
   }
-
-
 }

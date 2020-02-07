@@ -1,21 +1,53 @@
-<h2>Members Detail Component!</h2>
 
-Você está editando: {{ selected_user.first_name }} {{ selected_user.last_name }}
-<br>
-ID:
-<input type="text" [(ngModel)]="selected_user.id" readonly> <br>
-Usuário:
-<input type="text" [(ngModel)]="selected_user.username"> <br>
-Nome:
-<input type="text" [(ngModel)]="selected_user.first_name"> <br>
-Sobrenome:
-<input type="text" [(ngModel)]="selected_user.last_name"> <br>
-E-mail:
-<input type="text" [(ngModel)]="selected_user.email"> <br>
-Admin:
-<input type="text" [(ngModel)]="selected_user.is_superuser"> <br>
-Ativo:
-<input type="text" [(ngModel)]="selected_user.is_active"> <br>
+<div class="container">
+  <div class="box">
+    <header style="background: #fff; color: #000000; font-weight: bold;">
+      <h3>Você está editando: {{ selected_user.first_name }} {{ selected_user.last_name }}</h3>
+    </header>
+    <div class="form-group">
+      <div class="form-group" [style.fontSize.px]="18">
+        <mat-form-field>
+            <input matInput placeholder="Código" type="text" [(ngModel)]="selected_user.id" readonly>
+        </mat-form-field>
+      </div>
 
-<button Style="margin: 5px" (click)="cancelClicked(user)" class="button">Cancelar</button>
-<button style="margin: 5px;"(click)="update()" class="button">Atualizar</button>
+      <div class="form-group" [style.fontSize.px]="18">
+        <mat-form-field>
+            <input matInput placeholder="Usuário" type="text" [(ngModel)]="selected_user.username">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group" [style.fontSize.px]="18">
+        <mat-form-field>
+            <input matInput placeholder="Nome" class="form-control" type="text" [(ngModel)]="selected_user.first_name">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group" [style.fontSize.px]="18">
+        <mat-form-field>
+            <input matInput placeholder="Sobrenome" class="form-control" type="text" [(ngModel)]="selected_user.last_name">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group" [style.fontSize.px]="18">
+        <mat-form-field>
+            <input matInput placeholder="E-mail" class="form-control" type="email" [(ngModel)]="selected_user.email">
+        </mat-form-field>
+      </div>
+
+      Administrador:<br>
+        <mat-radio-group class="form-control" [(ngModel)]="selected_user.is_superuser">
+            <mat-radio-button value="true">Sim</mat-radio-button>
+            <mat-radio-button style="margin: 5px;" value="false">Não</mat-radio-button>
+        </mat-radio-group><br>
+
+      Ativo:<br>
+        <mat-radio-group class="form-control" [(ngModel)]="selected_user.is_active">
+            <mat-radio-button value="true"> Sim </mat-radio-button>
+            <mat-radio-button style="margin: 5px;" value="false"> Não </mat-radio-button>
+        </mat-radio-group><br>
+      <button class="btn btn-outline-danger" (click)="cancelClicked()">Cancelar</button>
+      <button class="btn btn-outline-success" (click)="update()">Atualizar</button>
+    </div>
+  </div>
+</div>

@@ -1,32 +1,36 @@
+<h1><a>Usuários</a></h1>
+<div>
+  <button (click)="newUser()" class="btn btn-outline-success" style="margin-bottom: 20px; float: right;">Novo</button>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col" style="text-align: center;">ID</th>
+        <th scope="col" style="text-align: center;">Usuário</th>
+        <th scope="col" style="text-align: center;">Nome</th>
+        <th scope="col" style="text-align: center;">E-mail</th>
+        <th scope="col" style="text-align: center;">Ativo</th>
+        <th scope="col" style="text-align: center;">DT Cadastro</th>
+        <th scope="col" style="text-align: center;">Opções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr scope="row" *ngFor="let user of items | orderBy: order">
+        <td style="text-align: center;">{{ user.id }}</td>
+        <td style="text-align: center;">{{ user.username }}</td>
+        <td style="text-align: center;">{{ user.first_name }} {{ user.last_name }}</td>
+        <td style="text-align: center;">{{ user.email }}</td>
+        <td style="text-align: center;">{{true == user.is_active ? 'Sim' : 'Não' }}</td>
+        <td style="text-align: center;">{{ user.date_joined | date:'dd/MM/yyyy' }}</td>
+        <td style="text-align: center;">
+          <button mat-icon-button>
+            <mat-icon style="margin: 5px;" (click)="deleteClicked(user)">delete</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon style="margin: 5px;" (click)="editClicked(user)">edit</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-
-<h1 (click)="home()">Usuários</h1>
-<button (click)="newUser()" class="button primary" style="margin-bottom: 20px; float: right;">Novo</button>
-
-<table class="alt">
-  <thead>
-    <tr>
-      <th style="text-align: center;">ID</th>
-      <th style="text-align: center;">Usuário</th>
-      <th style="text-align: center;">Nome</th>
-      <th style="text-align: center;">E-mail</th>
-      <th style="text-align: center;">Ativo</th>
-      <th style="text-align: center;">DT Cadastro</th>
-      <th style="text-align: center;">Opções</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of items">
-      <td style="text-align: center;">{{ user.id }}</td>
-      <td style="text-align: center;">{{ user.username }}</td>
-      <td style="text-align: center;">{{ user.first_name }} {{ user.last_name }}</td>
-      <td style="text-align: center;">{{ user.email }}</td>
-      <td style="text-align: center;">{{ user.is_active }}</td>
-      <td style="text-align: center;">{{ user.date_joined }}</td>
-      <td style="text-align: center;">
-        <a Style="margin: 5px" class="button small icon fas fa-trash-alt" (click)="deleteClicked(user)"></a>
-        <a Style="margin: 5px" class="button small icon fas fa-edit" (click)="editClicked(user)"></a>
-      </td>
-    </tr>
-  </tbody>
-</table>

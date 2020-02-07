@@ -6,15 +6,6 @@
   overflow: hidden;
 }
 
-.dashboard-container {
-  display: flex;
-  flex-flow: column nowrap;
-  flex: 1 1 100%;
-  .dashboard-page {
-    flex: 1 1 auto;
-    position: relative;
-  }
-}
 
 /*
   Overriding ngx-widget-grid edit styling
@@ -34,4 +25,24 @@
 
 .btn-group {
   margin-left: 0.5rem;
+}
+
+.titulo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.excluirObjeto {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  color: black;
+}
+
+.info {
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+  color: black;
 }

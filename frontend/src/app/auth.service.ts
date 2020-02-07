@@ -7,11 +7,10 @@ import { tap, shareReplay } from 'rxjs/operators';
 
 import * as jwtDecode from 'jwt-decode';
 import * as moment from 'moment';
-
+import * as myGlobals from './globals';
 @Injectable()
 export class AuthService {
-
-  private apiRoot = 'http://localhost:8000/auth/';
+  private apiRoot = myGlobals.url + 'auth/';
 
   constructor(private http: HttpClient) { }
 
@@ -41,7 +40,7 @@ export class AuthService {
 
   signup(username: string, email: string, password1: string, password2: string) {
     return this.http.post(
-      this.apiRoot.concat('users'),
+      this.apiRoot.concat('signup/'),
       { username, email, password1, password2 }
     ).pipe(
       tap(response => this.setSession(response)),

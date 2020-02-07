@@ -50,7 +50,7 @@ export class UserDeleteComponent implements OnInit {
     );
   }
 
-  cancelClicked = (user) => {
+  cancelClicked = () => {
     this.router.navigate(['users']);
   }
 }

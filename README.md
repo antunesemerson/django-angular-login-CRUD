@@ -1,51 +1,46 @@
-Install
+# Django-Angular-ngx-widget-grid
 
-Python 3.7
+Crud completo, login e dashboard Grid utilizando Django como backend conectando no PostgreSQL 
+e Angular como Frontend, dashboard com ngx-widget-grid.
 
-https://www.python.org/downloads/
+Ferramentas e pacotes:
 
-Django 3
+[Python 3.7](https://www.python.org/downloads/)
 
-https://www.djangoproject.com/download/
+[Django 3](https://www.djangoproject.com/download/)
 
-pip install Django==3        #2020
+> pip install Django==3
 
-Considerando que você tenha o Python e o Django instalados.
+[Node](https://nodejs.org/en/download/)
 
-#Python/Django
+[Angular](https://cli.angular.io/)
 
-cd backend				#Pasta backend
+> npm install -g @angular/cli
 
-python -m venv venv			#Criar venv
 
-cd venv\Scripts				#Pasta para ativar venv
+# Instalar Projeto
 
-activate				#Ativar venv
+Criar uma venv
 
-cd ..\..				#Voltar para pasta backend
+> python -m venv venv
 
-pip install -r requirements.txt		#Instalar requisitos do projeto
+cd venv\Scripts\activate				#Ativar venv Windows
 
-python manage.py runserver		#Rodar projeto
+. venv/bin/activate                     #Ativar venv Linux
 
-Install
+Na pasta backend instale os requerimentos do projeto Django.
 
-#Node
+> pip install -r requirements.txt
 
-https://nodejs.org/en/download/
+Iniciar backend
 
-#Angular
+> python manage.py runserver
 
-https://cli.angular.io/
 
-npm install -g @angular/cli
+Na pasta frontend instale os requerimentos projeto Angular.
 
-Considerando que você tenha o Angular instalado.
+> npm install
 
-#Angular
+Iniciar frontend
 
-cd frontend	#Pasta frontend
-
-npm install	#Instalar projeto
-
-ng serve	#Rodar projeto
+> ng serve

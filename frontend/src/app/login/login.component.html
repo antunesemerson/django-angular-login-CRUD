@@ -1,11 +1,15 @@
-<div style="width: 30%; margin-left: 35%;">
+
+<div class="form-group" style="width: 30%; margin: auto; margin-top: 15%;">
   <div style="text-align:center">
     <h1>
       Login
     </h1>
   </div>
 
-  <input #username type='text' placeholder='usuario' onkeypress="handle(event)"> <br>
-  <input #password type='password' placeholder='senha' onkeypress="handle(event)"> <br>
-  <button id="logar" (click)="login(username.value, password.value)">Entrar</button>
+  <input style="border-bottom: 1px solid #D3D3D3; margin: 5px;" class="form-control" #username type='text' placeholder='Usuario' onkeypress="handle(event)"> <br><br>
+  <input style="border-bottom: 1px solid #D3D3D3; margin: 5px;" class="form-control" #password type='password' placeholder='Senha' onkeypress="handle(event)"> <br>
+  <div style="color: red" *ngIf="submitted">
+    {{ mensagem }}
+  </div>
+  <button style="margin-left: 10px;" class="form-control btn" id="logar" (click)="login(username.value, password.value)">Entrar</button>
 </div>

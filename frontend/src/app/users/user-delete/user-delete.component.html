@@ -1,7 +1,10 @@
-<h2>Members Detail Component!</h2>
 
-Você está excluindo: {{ selected_user.first_name }} {{ selected_user.last_name }}
-<br>
-
-<button Style="margin: 5px" (click)="cancelClicked('user')" class="button">Cancelar</button>
-<button Style="margin: 5px" (click)="delete()" class="button" style="margin: 10px;">Excluir</button>
+<div class="container">
+  <div class="box">
+    <header style="background: #fff; color: #000000; font-weight: bold;">
+      <h3>Você está excluindo: {{ selected_user.first_name }} {{ selected_user.last_name }}</h3>
+    </header>
+    <button style="margin: 5px" (click)="cancelClicked()" class="btn btn-outline-success">Cancelar</button>
+    <button style="margin: 5px" (click)="delete()" class="btn btn-outline-danger">Excluir</button>
+  </div>
+</div>

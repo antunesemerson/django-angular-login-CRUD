@@ -1,15 +1,58 @@
-<h2>Novo Usuário</h2>
 
-Usuário:
-<input type="text" [(ngModel)]="user.username"> <br>
-Nome:
-<input type="text" [(ngModel)]="user.first_name"> <br>
-Sobrenome:
-<input type="text" [(ngModel)]="user.last_name"> <br>
-E-mail:
-<input type="text" [(ngModel)]="user.email"> <br>
-Senha:
-<input type="text" [(ngModel)]="user.password"> <br>
+<div class="container">
+  <div class="box">
+    <header style="background: #fff; color: #000000; font-weight: bold;">
+      <h3 style="margin: auto;">Novo Usuário</h3>
+    </header>
+    <form [formGroup]="registerForm" (ngSubmit)="save()">
+      <div class="form-group" [style.fontSize.px]="18">
+        <mat-form-field>
+            <input matInput placeholder="Usuário" formControlName="username" [ngClass]="{'is-invalid': submitted && f.username.errors }" type="text" [(ngModel)]="username"> <br>
+            <mat-error *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <mat-error style="font-size: small;" role="alert" *ngIf="f.username.errors.required">Usuário é obrigatório</mat-error>
+            </mat-error>
+        </mat-form-field>
+      </div>
 
-<button Style="margin: 5px" (click)="cancelClicked(user)" class="button">Cancelar</button>
-<button Style="margin: 5px" (click)="save()" class="button">Salvar Membro</button>
+      <div class="form-group" [style.fontSize.px]="18">
+        <mat-form-field>
+          <input matInput placeholder="E-mail" formControlName="email" [ngClass]="{'is-invalid': submitted && f.email.errors }"
+              type="text" [(ngModel)]="email"> <br>
+          <mat-error *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <mat-error style="font-size: small;" role="alert" *ngIf="f.email.errors.required">Email é obrigatório</mat-error>
+              <mat-error style="font-size: small;" role="alert" *ngIf="f.email.errors.email">Email inválido</mat-error>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group" [style.fontSize.px]="18">
+        <mat-form-field>
+          <input matInput placeholder="Senha" formControlName="password1"
+              [ngClass]="{'is-invalid': submitted && f.password1.errors }" type="password" [(ngModel)]="password1"> <br>
+          <mat-error *ngIf="submitted && f.password1.errors" class="invalid-feedback">
+              <mat-error style="font-size: small;" *ngIf="f.password1.errors.required">Senha é obrigatória</mat-error>
+              <mat-error style="font-size: small;" *ngIf="f.password1.errors.minlength">A senha precisa ter no mínimo 6 caracteres
+              </mat-error>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group" [style.fontSize.px]="18">
+        <mat-form-field>
+          <input matInput placeholder="Confirmar Senha" formControlName="password2"
+              [ngClass]="{'is-invalid': submitted && f.password2.errors }" type="password" [(ngModel)]="password2"> <br>
+          <mat-error *ngIf="submitted && f.password2.errors" class="invalid-feedback">
+              <mat-error style="font-size: small;" role="alert" *ngIf="f.password2.errors.required">Confirmação da senha é obrigatória
+              </mat-error>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <span style="font-size: small;" *ngIf="password1 != password2" class="error">Campos devem ser iguais!!! </span><BR>
+
+      <button type="submit" Style="margin: 5px" class="btn btn-outline-success">Salvar Usuário</button>
+      <button Style="margin: 5px" type="reset" (click)="cancelClicked()" class="btn btn-outline-danger">Cancelar</button>
+    </form>
+  </div>
+</div>
+
+
