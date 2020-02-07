@@ -3,44 +3,46 @@
 Crud completo, login e dashboard Grid utilizando Django como backend conectando no PostgreSQL 
 e Angular como Frontend, dashboard com ngx-widget-grid.
 
-Ferramentas e pacotes:
+## Ferramentas e pacotes:
 
-[Python 3.7](https://www.python.org/downloads/)
+* [Python 3.7](https://www.python.org/downloads/)
 
-[Django 3](https://www.djangoproject.com/download/)
+* [Django 3](https://www.djangoproject.com/download/)
 
-> pip install Django==3
+``` pip install Django==3 ```
 
-[Node](https://nodejs.org/en/download/)
+* [Node](https://nodejs.org/en/download/)
 
-[Angular](https://cli.angular.io/)
+* [Angular](https://cli.angular.io/)
 
-> npm install -g @angular/cli
+``` npm install -g @angular/cli ```
 
 
 # Instalar Projeto
 
-Criar uma venv
+* Criar uma venv
 
-> python -m venv venv
+``` python -m venv venv ```
 
+```
 cd venv\Scripts\activate				#Ativar venv Windows
 
 . venv/bin/activate                     #Ativar venv Linux
+```
 
-Na pasta backend instale os requerimentos do projeto Django.
+## Na pasta backend instale os requerimentos do projeto Django.
 
-> pip install -r requirements.txt
+``` pip install -r requirements.txt ```
 
-Iniciar backend
+* Iniciar backend
 
-> python manage.py runserver
+``` python manage.py runserver ```
 
 
-Na pasta frontend instale os requerimentos projeto Angular.
+## Na pasta frontend instale os requerimentos projeto Angular.
 
-> npm install
+``` npm install ```
 
-Iniciar frontend
+* Iniciar frontend
 
-> ng serve
+``` ng serve ```
