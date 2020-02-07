@@ -1,7 +1,7 @@
 # Django-Angular-ngx-widget-grid
 
 Crud completo, login e dashboard Grid utilizando Django como backend conectando no PostgreSQL 
-e Angular como Frontend, dashboard com ngx-widget-grid.
+e Angular como frontend, dashboard com ngx-widget-grid.
 
 ![](./images/screenshot.bmp)
 
