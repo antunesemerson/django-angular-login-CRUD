@@ -9,40 +9,54 @@ e Angular como Frontend, dashboard com ngx-widget-grid.
 
 * [Django 3](https://www.djangoproject.com/download/)
 
-``` pip install Django==3 ```
+``` 
+pip install Django==3 
+```
 
 * [Node](https://nodejs.org/en/download/)
 
 * [Angular](https://cli.angular.io/)
 
-``` npm install -g @angular/cli ```
+``` 
+npm install -g @angular/cli 
+```
 
 
 # Instalar Projeto
 
 * Criar uma venv
 
-``` python -m venv venv ```
+``` 
+python -m venv venv 
+```
 
 ```
-cd venv\Scripts\activate				#Ativar venv Windows
+cd venv\Scripts\activate		#Ativar venv Windows
 
 . venv/bin/activate                     #Ativar venv Linux
 ```
 
 ## Na pasta backend instale os requerimentos do projeto Django.
 
-``` pip install -r requirements.txt ```
+``` 
+pip install -r requirements.txt 
+```
 
 * Iniciar backend
 
-``` python manage.py runserver ```
+``` 
+python manage.py runserver 
+```
 
 
 ## Na pasta frontend instale os requerimentos projeto Angular.
 
-``` npm install ```
+``` 
+npm install 
+```
 
 * Iniciar frontend
 
-``` ng serve ```
+``` 
+ng serve 
+```
