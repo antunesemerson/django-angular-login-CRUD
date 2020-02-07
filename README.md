@@ -3,6 +3,8 @@
 Crud completo, login e dashboard Grid utilizando Django como backend conectando no PostgreSQL 
 e Angular como Frontend, dashboard com ngx-widget-grid.
 
+![](./images/screenshot.bmp)
+
 ## Ferramentas e pacotes:
 
 * [Python 3.7](https://www.python.org/downloads/)
