@@ -33,7 +33,7 @@ python -m venv venv
 ```
 
 ```
-cd venv\Scripts\activate		#Ativar venv Windows
+venv\Scripts\activate		        #Ativar venv Windows
 
 . venv/bin/activate                     #Ativar venv Linux
 ```
